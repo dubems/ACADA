@@ -29,11 +29,13 @@ ACADA was built considering some facts which include:
 - Use of some cool technologies like Ajax, Bootstrap,Laravel,Vue.js.
 - Videos can also be shared via twitter(for logged in users)
 - Built UX/UI from scratch
+- Visiting an  individual video show related videos by the side(still in progress)
 
 
 ## ACADA'S Approach. WHY?
 - Non easy to use softwares becomes more or less a burden to the user. That's why easy of usage was paramount ACADA'S design
 - The UX/UI was built from scratch in order to have full control of the platform for easy maintenance and upgrade
+- Easy accessibility of related videos
 
 
 

@@ -4,6 +4,7 @@ const homepage = new Vue({
     el:'#homepage',
     data:{
 
+        returnedData:false,
         category:'',
         allVideos:'',
         currentVideo:''
@@ -35,13 +36,17 @@ const homepage = new Vue({
          */
         getVideoUnderCategory()
         {
+            this.returnedData = false;
             this.$http.get('/all-videos/'+this.category)
                 .then(response=>{
 
                     if(response.body.data == 'error')
                     {
+                        this.returnedData = true;
+
                         return toastr.error('Whoops!, Something went wrong. PLease try again')
                     }
+                    this.returnedData = true;
 
                     this.allVideos = response.body.data;
 
@@ -60,5 +65,6 @@ const homepage = new Vue({
 
     mounted(){
         this.getAllVideos();
+        this.returnedData = true;
     }
 });

@@ -5,7 +5,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Laravel</title>
+        <title>ACADA</title>
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
@@ -125,6 +125,10 @@
             <div class="col-md-12">
                 <div class="panel panel-default" style="height: 500px;">
                         <div class="panel-body">
+
+                            <div v-show="!returnedData" class="loader-holder"><div id="cssload-pgloading"><div class="cssload-loadingwrap"><ul class="cssload-bokeh">
+                                            <li></li><li></li><li></li><li></li></ul><div class="loader-message"><span>Loading</span></div></div></div></div>
+
                     <div class="row">
                         <div v-for="video in allVideos" class="col-sm-2 video-listing"
                              :class="video.category.categories" @click.prevent="playVideo(video)">
