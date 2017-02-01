@@ -1,0 +1,40 @@
+img.user-avatar{
+  height: 45px;
+  border-radius: 33px;
+  margin-top: 2px;
+}
+a{
+  color:inherit;
+}
+
+ul.sidebar{
+  list-style-type: none;
+  padding:0px;
+
+  li:hover{
+    background-color:#F1F2EB;
+
+  }
+
+   li.sidebar-title{
+     background-color: #64B5F6;
+     color: white;
+     font-weight: bolder;
+   }
+
+  li:hover a{
+    background-color: #F1F2EB;
+    color:inherit;
+  }
+  li{
+    line-height: 40px;
+  }
+  a{
+    padding-left:40px;
+  }
+
+  a:hover{
+    text-decoration: none;
+    color:inherit;
+  }
+}

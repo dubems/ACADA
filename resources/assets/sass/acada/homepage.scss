@@ -1,0 +1,48 @@
+div.video-category{
+  margin-top: 6px;
+  width: 250px;
+  margin-right: 205px;
+}
+
+div.video-listing
+{
+  height: 130px;
+  margin:2px;
+  border:1px solid blue;
+    color: white;
+    font-weight: bolder;
+  cursor: pointer;
+  opacity: 0.8;
+}
+.web{
+  background:#ec971f;
+}
+
+.mobile{
+  background:#7e57c2;
+}
+.android{
+  background: #689f38;
+}
+.pc{
+  background:#90a4ae;
+}
+
+.modal-content{
+  border-radius: 0px;
+}
+.modal-body{
+  height:450px;
+}
+
+iframe.play-video{
+  height:100%;
+  width:100%;
+}
+
+span.video-name
+{
+  float: left;
+  font-weight: bold;
+  font-size: large;
+}
