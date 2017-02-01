@@ -247,8 +247,8 @@
 
 .loader-holder {
     position: absolute;
-    background-color:#BDBDBD;
-    opacity:0.7;
+    background-color:white;
+    opacity:0.87;
     top: 0;
     left: 0;
     right: 0;
