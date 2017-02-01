@@ -21,6 +21,7 @@ const app = new Vue({
     el: '#app',
     data:{
 
+        returnedData:false,
         category:'',
         currentSlug:'',
 
@@ -88,15 +89,17 @@ const app = new Vue({
         {
             var $url = '/users/'+this.user.id;
 
+            this.returnedData = false;
             this.$http.put($url,this.user)
                 .then(response =>{
 
                     if(response.body.status != 'success')
                     {
+                        this.returnedData = true;
                         return toastr.error('Profile update was not successful, please try again');
                     }
 
-                    console.log(response.body.data);
+                    this.returnedData = true;
                     this.user = response.body.data;
 
                      return toastr.success('Profile has been updated successfully');
@@ -107,14 +110,18 @@ const app = new Vue({
          * create video
          */
         createVideo:function () {
+
+            this.returnedData = false;
             this.$http.post('/videos',this.newVideo)
                 .then(response=>{
 
                     if(response.body.status == 'error')
                     {
+                        this.returnedData = true;
                         return toastr.error('Whoops! there was an error, please try again');
                     }
 
+                    this.returnedData = true;
                     this.userVideos.push(response.body.data);
                     this.newVideo = {};
 
@@ -127,6 +134,8 @@ const app = new Vue({
          * Return user videos
          */
         getUserVideos:function () {
+
+
         this.$http.get('/videos')
             .then(response=>{
 
@@ -166,13 +175,17 @@ const app = new Vue({
          */
         getVideoUnderCategory()
         {
+            this.returnedData = false;
+
             this.$http.get('/all-videos/'+this.category)
                 .then(response=>{
 
                     if(response.body.data == 'error')
                     {
+                        this.returnedData = true;
                         return toastr.error('Whoops!, Something went wrong. PLease try again')
                     }
+                    this.returnedData = true;
 
                     this.userVideos = response.body.data;
 
@@ -191,7 +204,7 @@ const app = new Vue({
     },
 
     mounted(){
-
+        this.returnedData = true;
         this.getAuthenticatedUser();
         this.getUserVideos();
 

@@ -14,6 +14,7 @@
     <link href="/css/app.css" rel="stylesheet">
     <link href="/css/ionicons/css/ionicons.min.css" rel="stylesheet">
     <link href="/css/toastr.min.css" rel="stylesheet">
+    <link href="/css/loader.css" rel="stylesheet">
 
     <!-- Scripts -->
     <script>

@@ -5,6 +5,9 @@
     <link rel="canonical"
           :href="currentSlug">
 
+
+
+
     <div class="row">
         <div class="col-md-2 col-md-offset-1">
             <div class="panel panel-default" style="height:400px">
@@ -21,6 +24,10 @@
         </div>
         <div class="col-md-8">
             <div class="panel panel-default">
+
+                <div v-show="!returnedData" class="loader-holder"><div id="cssload-pgloading"><div class="cssload-loadingwrap"><ul class="cssload-bokeh">
+                                <li></li><li></li><li></li><li></li></ul><div class="loader-message"><span>Loading</span></div></div></div></div>
+
                 <div class="panel-heading">@{{currentView}}
                     <div class=" col-sm-4 col-sm-offset-4" style="float:right">
                         <select name="" id="" v-show="views.dashboard" v-model="category"
